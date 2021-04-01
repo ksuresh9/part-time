@@ -7,8 +7,6 @@ export default class Table extends React.Component {
         super(props);
     }
     refreshTable = () => {
-        console.log('T Data:',this.props.data)
-        console.log('T columns:',this.props.columns)
         const opts = {
             data: this.props.data,
             headerSort: false,
@@ -22,7 +20,9 @@ export default class Table extends React.Component {
             movableColumns: false,
             resizableRows: false,
             columns: this.props.columns,
-            placeholder: "No Data Available"
+            placeholder: "No Data Available",
+            paginationSizeSelector: [1, 5, 10, true],
+            paginationButtonCount:3
         }
 
         let table = new Tabulator("#table", opts)
