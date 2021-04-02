@@ -20,9 +20,7 @@ export default class Table extends React.Component {
             movableColumns: false,
             resizableRows: false,
             columns: this.props.columns,
-            placeholder: "No Data Available",
-            paginationSizeSelector: [1, 5, 10, true],
-            paginationButtonCount:3
+            placeholder: "No Data Available"
         }
 
         let table = new Tabulator("#table", opts)
